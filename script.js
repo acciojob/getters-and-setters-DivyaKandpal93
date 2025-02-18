@@ -1,19 +1,20 @@
-//complete this code
 class Person {
 	constructor(nameEmp, ageEmp){
-		this.nameEmp = nameEmp;
-		this.ageEmp= ageEmp;
+		this._name = nameEmp;
+		this._age = ageEmp;
 	}
 	get name(){
-        return this.nameEmp;
+        return this._name;
     }
-    get age() {
-		return this.ageEmp;
+    set name(newName){
+        this._name = newName;
+    }
+    get age(){
+		return this._age;
 	}
     set age(newAge){
-        this.ageEmp = newAge;
+        this._age = newAge;
     }
-    
 }
 
 class Student extends Person {
@@ -22,9 +23,7 @@ class Student extends Person {
 	}
     study(){
         console.log(`${this.name} is studying`);
-        console.log(`${this.name} age is ${this.age}`);
     }
-	
 }
 
 class Teacher extends Person {
@@ -33,20 +32,18 @@ class Teacher extends Person {
 	}
     teach(){
         console.log(`${this.name} is teaching`);
-        console.log(`${this.name} age is ${this.age}`);
     }
-	
-	
 }
+
 const ob1 = new Student("Divya",25);
 ob1.study();
 ob1.age =32;
 const ob2 = new Teacher("Vivek", 24);
-ob2.age = 25; // Using the setter to change age
+ob2.age = 25; 
 console.log(ob2.age); 
 console.log(ob1.age);
 ob2.teach();
-// Do not change the code below this line
+
 window.Person = Person;
 window.Student = Student;
 window.Teacher = Teacher;
