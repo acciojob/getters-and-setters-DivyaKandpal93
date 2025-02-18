@@ -42,8 +42,9 @@ const ob1 = new Student("Divya",25);
 ob1.study();
 ob1.age =32;
 const ob2 = new Teacher("Vivek", 24);
-ob2.age = 28;
-ob2.teach();
+ob2.age = 25; // Using the setter to change age
+console.log(ob2.age); 
+console.log(ob1.age);
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
