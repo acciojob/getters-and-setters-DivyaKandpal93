@@ -7,6 +7,9 @@ class Person {
 	get name(){
         return this.nameEmp;
     }
+    get age() {
+		return this.ageEmp;
+	}
     set age(newAge){
         this.ageEmp = newAge;
     }
@@ -19,6 +22,7 @@ class Student extends Person {
 	}
     study(){
         console.log(`${this.name} is studying`);
+        console.log(`${this.name} age is ${this.age}`);
     }
 	
 }
@@ -29,6 +33,7 @@ class Teacher extends Person {
 	}
     teach(){
         console.log(`${this.name} is teaching`);
+        console.log(`${this.name} age is ${this.age}`);
     }
 	
 	
@@ -36,6 +41,7 @@ class Teacher extends Person {
 const ob1 = new Student("Divya",25);
 ob1.study();
 const ob2 = new Teacher("Vivek", 24);
+ob2.age = 28;
 ob2.teach();
 // Do not change the code below this line
 window.Person = Person;
