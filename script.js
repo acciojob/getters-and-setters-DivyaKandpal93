@@ -40,6 +40,7 @@ class Teacher extends Person {
 }
 const ob1 = new Student("Divya",25);
 ob1.study();
+ob1.age =32;
 const ob2 = new Teacher("Vivek", 24);
 ob2.age = 28;
 ob2.teach();
